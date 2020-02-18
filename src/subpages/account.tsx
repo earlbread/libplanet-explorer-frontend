@@ -172,7 +172,7 @@ const TransactionsList: React.FC<TxListProps> = ({ transactions }) => {
       onRender: ({ signer }) => (
         // FIXME: We'd better to use absolute paths and make Gatsby automatically
         // to rebase these absolute paths on the PATH_PREFIX configuration.
-        <Link href={`./?${signer}`}>{signer}</Link>
+        <Link href={`./account?${signer}`}>{signer}</Link>
       ),
     },
     {
@@ -202,7 +202,7 @@ const TransactionsList: React.FC<TxListProps> = ({ transactions }) => {
       isHeaderVisible={true}
       // FIXME: We'd better to use absolute paths and make Gatsby automatically
       // to rebase these absolute paths on the PATH_PREFIX configuration.
-      onItemInvoked={({ id }) => navigate(`../transaction/?${id}`)}
+      onItemInvoked={({ id }) => navigate(`./transaction/?${id}`)}
     />
   );
 };
